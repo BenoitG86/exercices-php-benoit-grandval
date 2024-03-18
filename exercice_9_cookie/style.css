@@ -1,0 +1,28 @@
+*
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body
+{
+    padding-top: 0;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+}
+
+div
+{
+    margin: 5px;
+}
+
+span
+{
+    text-decoration: underline;
+}
+
+main
+{
+    padding: 5px;
+    margin: 20px;
+}
