@@ -31,11 +31,15 @@ INNER JOIN instrument
 	ON instrument.id_instrument = cours.id_instrument
 WHERE instrument.id_instrument = 1;";
 $resultat = mysqli_query($connexion, $sql);
+$resultatCheck = mysqli_num_rows($resultat);
 
-if ($resultat) {
-      foreach ($resultat as $commande) {
-            print_r($commande);
+
+if ($resultatCheck > 0) {
+      while ($row = mysqli_fetch_assoc($resultat))
+      {
+            echo $row['nom'] . ' a cours de ' . $row['nom_instrument'] . '<br>';
       }
+
 } else {
       echo "NSM, c'est relou, y a une erreur wsh" . mysqli_error($connexion);
 }
